@@ -142,7 +142,7 @@ python backend/app.py
 ```bash
 cd frontend
 npm install
-npm start
+npm run dev
 ```
 
 *Open `http://localhost:3000` in your browser to use the app.*
