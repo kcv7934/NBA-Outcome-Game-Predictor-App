@@ -74,4 +74,4 @@ def predict():
 
 # Run the app in debug mode if this script is executed directly
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
