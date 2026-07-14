@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: backend/Dockerfile
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/nba-client:latest
     ports:
       - "5000:5000"
 
@@ -10,6 +11,7 @@ services:
     build:
       context: .
       dockerfile: frontend/Dockerfile
+    image: ${AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/nba-server:latest
     ports:
       - "3000:3000"
     depends_on:
