@@ -53,7 +53,7 @@ def predict():
 
     # Validate that both teams are provided
     if not home or not away:
-        return jsonify({"error": "Both home and away teams are required"}), 499
+        return jsonify({"error": "Both home and away teams are required"}), 400
     
     # Call the prediction function from ml.predict_game
     prediction_res = predict_nba_game(home, away)
@@ -74,4 +74,4 @@ def predict():
 
 # Run the app in debug mode if this script is executed directly
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
